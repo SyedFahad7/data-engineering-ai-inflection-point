@@ -129,25 +129,6 @@
 </div>
 </div>
 </div>
-<!-- Resources / QR Card -->
-<div class="contact-card rounded-2xl p-6 flex items-center justify-between gap-6">
-<div>
-<h4 class="text-lg font-bold text-white font-display mb-1">Download Slides</h4>
-<p class="text-slate-400 text-xs mb-3 max-w-[180px]">
-                        Get the full deck and reference architecture diagrams.
-                    </p>
-<div class="inline-flex items-center gap-2 text-indigo-400 text-xs font-mono uppercase tracking-wider">
-<span>Scan Now</span>
-<i class="fa-solid fa-arrow-right"></i>
-</div>
-</div>
-<div class="qr-box w-24 h-24 rounded-xl p-2 shrink-0">
-<div class="w-full h-full border-2 border-slate-900 rounded flex items-center justify-center relative">
-<i class="fa-solid fa-qrcode text-4xl text-slate-900 z-10"></i>
-<div class="absolute inset-0 opacity-10 bg-black"></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <!-- Footer -->
@@ -162,21 +143,5 @@
 </div>
 </div>
 </div>
-<!-- QR Code Section -->
-<div class="flex flex-col items-center justify-center h-screen bg-slate-900">
-<h1 class="text-4xl font-bold text-white mb-4">Scan to Download Slides</h1>
-<p class="text-slate-300 mb-8">Use your phone to scan the QR code below and download the slides.</p>
-<canvas id="qr-code"></canvas>
-</div>
-<script>
-    // Generate QR Code
-    const qr = new QRious({
-        element: document.getElementById('qr-code'),
-        value: 'https://data-engineering-ai-inflection-poin.vercel.app/', // Replace with your actual slide download link
-        size: 250,
-        background: '#0f172a',
-        foreground: '#f8fafc'
-    });
-</script>
 </body>
 </html>
