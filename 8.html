@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Modern Data Stack After AI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        /* Adjust slide-container to take up full screen */
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        /* Grid pattern */
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        /* Unified box style */
+        .mesh-box {
+            border: 2px solid #10b981; /* Emerald 500 */
+            background-color: rgba(6, 78, 59, 0.3); /* Emerald 900/30 */
+            position: relative;
+            backdrop-filter: blur(4px);
+        }
+        /* Connecting lines */
+        .connector-line {
+            position: absolute;
+            background-color: #10b981;
+            z-index: 0;
+        }
+        .pulse-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #34d399;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #34d399;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16">
+<!-- Header -->
+<div class="mb-10 border-b border-slate-700 pb-6 flex justify-between items-end relative z-20">
+<div>
+<p class="text-emerald-400 font-mono text-sm tracking-widest uppercase mb-2">Future State 2026</p>
+<h2 class="font-display text-5xl font-bold text-white tracking-tight">The Modern Data Stack <span class="text-emerald-400">After AI</span></h2>
+</div>
+<div class="text-slate-400 text-lg font-light">The Era of Convergence</div>
+</div>
+<div class="flex-1 flex gap-16 relative z-10">
+<!-- Left Column: Characteristics List -->
+<div class="w-5/12 flex flex-col justify-center space-y-10">
+<!-- Item 1 -->
+<div class="group">
+<div class="flex items-center space-x-4 mb-2">
+<div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center border border-emerald-500/50 text-emerald-400 group-hover:border-emerald-400 transition-colors shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+<i class="fa-solid fa-bolt text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white font-display">Near Real-Time</h3>
+</div>
+<p class="text-slate-400 text-base leading-relaxed pl-16">
+                        Data flows continuously. Latency is measured in seconds. The system reacts to events as they happen, not the next day.
+                    </p>
+</div>
+<!-- Item 2 -->
+<div class="group">
+<div class="flex items-center space-x-4 mb-2">
+<div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center border border-emerald-500/50 text-emerald-400 group-hover:border-emerald-400 transition-colors shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+<i class="fa-solid fa-brain text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white font-display">Decision Systems</h3>
+</div>
+<p class="text-slate-400 text-base leading-relaxed pl-16">
+                        Static dashboards are replaced by automated decision engines. Data directly powers features, pricing, and recommendations.
+                    </p>
+</div>
+<!-- Item 3 -->
+<div class="group">
+<div class="flex items-center space-x-4 mb-2">
+<div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center border border-emerald-500/50 text-emerald-400 group-hover:border-emerald-400 transition-colors shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+<i class="fa-solid fa-robot text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white font-display">AI Agents as Consumers</h3>
+</div>
+<p class="text-slate-400 text-base leading-relaxed pl-16">
+                        The primary data consumer is now software. Contracts, schemas, and reliability are enforced for autonomous agents.
+                    </p>
+</div>
+</div>
+<!-- Right Column: Visual Diagram (Circular Feedback Loop) -->
+<div class="w-7/12 bg-slate-800/30 rounded-3xl border border-slate-700/50 p-8 flex flex-col justify-center relative">
+<!-- Background decoration -->
+<div class="absolute inset-0 bg-slate-900/50 rounded-3xl z-0"></div>
+<div class="relative z-10 flex flex-col h-full justify-center items-center">
+<h3 class="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-8 text-center">Unified Feedback Loop</h3>
+<!-- Diagram Container -->
+<div class="relative w-full max-w-md h-64">
+<!-- Triangle Connector Lines -->
+<!-- Top to Right -->
+<div class="connector-line h-0.5 w-32 top-[35%] right-[25%] rotate-[30deg] bg-gradient-to-r from-emerald-500 to-emerald-800"></div>
+<!-- Right to Left -->
+<div class="connector-line h-0.5 w-48 bottom-[25%] left-[50%] -translate-x-1/2 bg-emerald-800"></div>
+<!-- Left to Top -->
+<div class="connector-line h-0.5 w-32 top-[35%] left-[25%] -rotate-[30deg] bg-gradient-to-l from-emerald-500 to-emerald-800"></div>
+<!-- Node 1: AI Agents (Top) -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 mesh-box rounded-xl p-3 flex flex-col items-center gap-2 z-10">
+<div class="w-10 h-10 bg-emerald-900/50 rounded-full flex items-center justify-center border border-emerald-500">
+<i class="fa-solid fa-microchip text-emerald-400"></i>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-white">AI Agents</p>
+<p class="text-[9px] text-emerald-300 uppercase tracking-wide">Action</p>
+</div>
+</div>
+<!-- Node 2: Product (Bottom Right) -->
+<div class="absolute bottom-0 right-0 w-40 mesh-box rounded-xl p-3 flex flex-col items-center gap-2 z-10">
+<div class="w-10 h-10 bg-emerald-900/50 rounded-full flex items-center justify-center border border-emerald-500">
+<i class="fa-solid fa-mobile-screen text-emerald-400"></i>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-white">Product</p>
+<p class="text-[9px] text-emerald-300 uppercase tracking-wide">Interface</p>
+</div>
+</div>
+<!-- Node 3: Data Platform (Bottom Left) -->
+<div class="absolute bottom-0 left-0 w-40 mesh-box rounded-xl p-3 flex flex-col items-center gap-2 z-10">
+<div class="w-10 h-10 bg-emerald-900/50 rounded-full flex items-center justify-center border border-emerald-500">
+<i class="fa-solid fa-server text-emerald-400"></i>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-white">Event Mesh</p>
+<p class="text-[9px] text-emerald-300 uppercase tracking-wide">Real-time</p>
+</div>
+</div>
+<!-- Arrows indicating flow -->
+<i class="fa-solid fa-chevron-right absolute top-[30%] right-[32%] text-emerald-500 rotate-[30deg]"></i>
+<i class="fa-solid fa-chevron-left absolute bottom-[12%] left-[50%] text-emerald-500"></i>
+<i class="fa-solid fa-chevron-up absolute top-[30%] left-[32%] text-emerald-500 -rotate-[30deg]"></i>
+<!-- Central Pulse -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border border-emerald-500/20 flex items-center justify-center animate-pulse">
+<div class="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center">
+<i class="fa-solid fa-arrows-rotate text-2xl text-emerald-500/50"></i>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center space-x-8 text-xs text-emerald-500/80">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle text-[6px] text-emerald-400"></i>
+<span>Continuous Learning</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle text-[6px] text-emerald-400"></i>
+<span>Self-Correction</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle text-[6px] text-emerald-400"></i>
+<span>Automated Value</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6 flex justify-between items-center text-slate-600 text-xs uppercase tracking-widest border-t border-slate-800/50 relative z-20">
+<p>The New Way</p>
+<p>08</p>
+</div>
+<!-- Background Decor -->
+<div class="absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0"></div>
+</div>
+</body>
+</html>

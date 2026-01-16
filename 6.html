@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>From Tools to Systems Thinking</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        /* Adjust slide-container to take up full screen */
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        /* Flow Animation Lines (simulated via CSS for static export compatibility) */
+        .flow-line {
+            position: absolute;
+            height: 2px;
+            background-color: #334155;
+            z-index: 0;
+        }
+        
+        /* Node Styles */
+        .system-node {
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        .system-node:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.4);
+        }
+        
+        /* Connector Arrows */
+        .arrow-right {
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #475569;
+            font-size: 1.5rem;
+        }
+
+        .highlight-ring {
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16">
+<!-- Header -->
+<div class="mb-8 border-b border-slate-700 pb-6 flex justify-between items-end relative z-20">
+<div>
+<p class="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-2">Systems Architecture</p>
+<h2 class="font-display text-5xl font-bold text-white tracking-tight">From Tools to Systems Thinking</h2>
+</div>
+<div class="text-slate-400 text-lg font-light">End-to-End Reliability</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col relative z-10">
+<!-- Top description -->
+<div class="mb-10 max-w-4xl">
+<p class="text-xl text-slate-300 font-light leading-relaxed">
+                    The modern data stack is no longer about chaining tools together. It's about designing cohesive systems where reliability, trust, and data flow are the primary deliverables.
+                </p>
+</div>
+<!-- System Diagram Container -->
+<div class="flex-1 flex items-center justify-between relative px-4">
+<!-- Connecting Line Background -->
+<div class="flow-line top-1/2 left-0 right-0 transform -translate-y-1/2"></div>
+<!-- Node 1: Sources -->
+<div class="system-node w-64 h-64 bg-slate-800/80 border border-slate-700 rounded-2xl p-6 flex flex-col backdrop-blur-sm">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-mono text-slate-500 uppercase">Input</span>
+<i class="fa-solid fa-database text-slate-400"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-2 font-display">Sources</h3>
+<div class="flex-1 space-y-2 mt-2">
+<div class="flex items-center space-x-2">
+<div class="w-1.5 h-1.5 bg-slate-500 rounded-full"></div>
+<p class="text-sm text-slate-400">Databases</p>
+</div>
+<div class="flex items-center space-x-2">
+<div class="w-1.5 h-1.5 bg-slate-500 rounded-full"></div>
+<p class="text-sm text-slate-400">SaaS APIs</p>
+</div>
+<div class="flex items-center space-x-2">
+<div class="w-1.5 h-1.5 bg-slate-500 rounded-full"></div>
+<p class="text-sm text-slate-400">Event Streams</p>
+</div>
+</div>
+<i class="fa-solid fa-arrow-right arrow-right"></i>
+</div>
+<!-- Node 2: The Platform (Central) -->
+<div class="system-node w-80 h-72 bg-slate-900 border-2 border-indigo-500 rounded-2xl p-6 flex flex-col shadow-2xl shadow-indigo-900/20 z-20 relative">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-indigo-600 px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider">Core System</div>
+<div class="flex items-center justify-between mb-4 mt-2">
+<span class="text-xs font-mono text-indigo-300 uppercase">Processing</span>
+<i class="fa-solid fa-server text-indigo-400"></i>
+</div>
+<h3 class="text-2xl font-bold text-white mb-3 font-display">Data Platform</h3>
+<div class="flex-1 grid grid-cols-2 gap-3 mt-1">
+<div class="bg-slate-800 rounded p-2 text-center border border-slate-700">
+<p class="text-xs text-slate-300 font-semibold">Governance</p>
+</div>
+<div class="bg-slate-800 rounded p-2 text-center border border-slate-700">
+<p class="text-xs text-slate-300 font-semibold">Observability</p>
+</div>
+<div class="bg-slate-800 rounded p-2 text-center border border-slate-700">
+<p class="text-xs text-slate-300 font-semibold">Quality</p>
+</div>
+<div class="bg-slate-800 rounded p-2 text-center border border-slate-700">
+<p class="text-xs text-slate-300 font-semibold">Security</p>
+</div>
+</div>
+<i class="fa-solid fa-arrow-right arrow-right text-indigo-400"></i>
+</div>
+<!-- Node 3: Decisions -->
+<div class="system-node w-64 h-64 bg-slate-800/80 border border-slate-700 rounded-2xl p-6 flex flex-col backdrop-blur-sm">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-mono text-slate-500 uppercase">Output</span>
+<i class="fa-solid fa-lightbulb text-slate-400"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-2 font-display">Decisions</h3>
+<div class="flex-1 space-y-2 mt-2">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-check text-indigo-500 text-xs"></i>
+<p class="text-sm text-slate-300 font-medium">AI Agents</p>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-check text-indigo-500 text-xs"></i>
+<p class="text-sm text-slate-300 font-medium">Automated Actions</p>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-check text-indigo-500 text-xs"></i>
+<p class="text-sm text-slate-300 font-medium">Product Features</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Labels -->
+<div class="flex justify-between px-4 mt-2 text-sm text-slate-500 font-mono">
+<div class="w-64 text-center"><p>Fragmented Inputs</p></div>
+<div class="w-80 text-center text-indigo-400"><p>Unified Trust Boundary</p></div>
+<div class="w-64 text-center"><p>High-Value Outcomes</p></div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6 flex justify-between items-center text-slate-600 text-xs uppercase tracking-widest border-t border-slate-800/50 relative z-20">
+<p>System Evolution</p>
+<p>06</p>
+</div>
+<!-- Background Decor -->
+<div class="absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-indigo-900/5 rounded-full blur-3xl pointer-events-none z-0"></div>
+</div>
+</body>
+</html>

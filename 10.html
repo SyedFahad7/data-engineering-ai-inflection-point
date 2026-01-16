@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Made Data More Valuable and More Difficult</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        /* Adjust slide-container to take up full screen */
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        /* Custom glow effects using shadow instead of gradients */
+        .glow-node {
+            box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glow-node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 40px -5px rgba(99, 102, 241, 0.4);
+            border-color: #818cf8;
+        }
+        .center-pulse {
+            animation: pulse-ring 3s infinite;
+        }
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(99, 102, 241, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16">
+<!-- Header -->
+<div class="mb-6 border-b border-slate-700 pb-6 flex justify-between items-end relative z-20">
+<div>
+<p class="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-2">The New Bottleneck</p>
+<h2 class="font-display text-4xl font-bold text-white tracking-tight">AI Made Data <span class="text-indigo-400">More Valuable</span> &amp; <span class="text-red-400">More Difficult</span></h2>
+</div>
+<div class="text-slate-400 text-lg font-light">The Trust Triad</div>
+</div>
+<!-- Main Content Layout -->
+<div class="flex-1 flex gap-12 relative z-10">
+<!-- Left Column: Context & High Level -->
+<div class="w-1/3 flex flex-col justify-center space-y-8">
+<div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+<div class="flex items-center gap-3 mb-3">
+<i class="fa-solid fa-sack-dollar text-green-400 text-xl"></i>
+<h3 class="font-bold text-white text-lg">Direct Monetization</h3>
+</div>
+<p class="text-slate-400 leading-relaxed text-sm">
+                        In the past, data supported decisions. Now, AI systems turn data directly into product features. The data <em>is</em> the product.
+                    </p>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded bg-red-500/10 flex items-center justify-center text-red-400 mt-1 shrink-0">
+<i class="fa-solid fa-triangle-exclamation text-sm"></i>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm mb-1">Silent Failures</h4>
+<p class="text-slate-500 text-xs leading-relaxed">Bad code crashes. Bad data makes AI hallucinate confidently. Detection is much harder.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded bg-indigo-500/10 flex items-center justify-center text-indigo-400 mt-1 shrink-0">
+<i class="fa-solid fa-dumbbell text-sm"></i>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm mb-1">Harder than Modeling</h4>
+<p class="text-slate-500 text-xs leading-relaxed">Open source models are commodities. Clean, governed, proprietary data is the moat.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: The Triad Visual -->
+<div class="w-2/3 relative flex items-center justify-center">
+<!-- SVG Connections Background -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 0;">
+<!-- Triangle Connections -->
+<defs>
+<marker id="arrowhead" markerheight="7" markerwidth="10" orient="auto" refx="28" refy="3.5">
+<polygon fill="#475569" points="0 0, 10 3.5, 0 7"></polygon>
+</marker>
+</defs>
+<!-- Top to Bottom Left -->
+<line stroke="#334155" stroke-dasharray="8 4" stroke-width="2" x1="50%" x2="25%" y1="20%" y2="75%"></line>
+<!-- Top to Bottom Right -->
+<line stroke="#334155" stroke-dasharray="8 4" stroke-width="2" x1="50%" x2="75%" y1="20%" y2="75%"></line>
+<!-- Bottom Left to Bottom Right -->
+<line stroke="#334155" stroke-dasharray="8 4" stroke-width="2" x1="25%" x2="75%" y1="75%" y2="75%"></line>
+<!-- Center Connections -->
+<line opacity="0.3" stroke="#6366f1" stroke-width="2" x1="50%" x2="50%" y1="20%" y2="50%"></line>
+<line opacity="0.3" stroke="#6366f1" stroke-width="2" x1="25%" x2="50%" y1="75%" y2="50%"></line>
+<line opacity="0.3" stroke="#6366f1" stroke-width="2" x1="75%" x2="50%" y1="75%" y2="50%"></line>
+</svg>
+<!-- Center Core: TRUST -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+<div class="w-32 h-32 bg-slate-900 rounded-full border-4 border-indigo-500 flex flex-col items-center justify-center center-pulse shadow-2xl">
+<i class="fa-solid fa-shield-halved text-3xl text-indigo-400 mb-2"></i>
+<span class="text-white font-bold tracking-wider font-display">TRUST</span>
+</div>
+</div>
+<!-- Node 1: Top (Quality) -->
+<div class="absolute top-[10%] left-1/2 transform -translate-x-1/2 w-64 glow-node bg-slate-800 border border-slate-600 rounded-xl p-5 z-10">
+<div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-slate-800 border-b border-r border-slate-600 rotate-45"></div>
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+<i class="fa-regular fa-circle-check"></i>
+</div>
+<h3 class="text-white font-bold font-display">Data Quality</h3>
+</div>
+<p class="text-slate-400 text-xs">
+                        Accuracy, freshness, and completeness. Without this, AI generates plausible nonsense.
+                    </p>
+</div>
+<!-- Node 2: Bottom Left (Governance) -->
+<div class="absolute bottom-[15%] left-[10%] w-64 glow-node bg-slate-800 border border-slate-600 rounded-xl p-5 z-10">
+<div class="absolute -top-3 right-10 w-6 h-6 bg-slate-800 border-t border-l border-slate-600 rotate-45"></div>
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+<i class="fa-solid fa-scale-balanced"></i>
+</div>
+<h3 class="text-white font-bold font-display">Governance</h3>
+</div>
+<p class="text-slate-400 text-xs">
+                        Access control and privacy. Critical when AI can inadvertently leak sensitive data in responses.
+                    </p>
+</div>
+<!-- Node 3: Bottom Right (Lineage) -->
+<div class="absolute bottom-[15%] right-[10%] w-64 glow-node bg-slate-800 border border-slate-600 rounded-xl p-5 z-10">
+<div class="absolute -top-3 left-10 w-6 h-6 bg-slate-800 border-t border-l border-slate-600 rotate-45"></div>
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+<i class="fa-solid fa-code-branch"></i>
+</div>
+<h3 class="text-white font-bold font-display">Lineage</h3>
+</div>
+<p class="text-slate-400 text-xs">
+                        Traceability and reproducibility. Understanding "why" the AI gave a specific answer.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6 flex justify-between items-center text-slate-600 text-xs uppercase tracking-widest border-t border-slate-800/50 relative z-20">
+<p>The AI Data Triad</p>
+<p>10</p>
+</div>
+<!-- Background Decor -->
+<div class="absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0"></div>
+</div>
+</body>
+</html>

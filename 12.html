@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Where Platforms Like Databricks Fit</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        /* Unified Platform Container Style */
+        .platform-boundary {
+            border: 2px dashed #475569;
+            background-color: rgba(15, 23, 42, 0.5);
+            position: relative;
+            border-radius: 24px;
+        }
+        
+        /* Card Styles */
+        .stage-card {
+            background-color: #1e293b; /* Slate 800 */
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        .stage-card.hero {
+            background-color: #312e81; /* Indigo 900 */
+            border-color: #6366f1; /* Indigo 500 */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: scale(1.05);
+        }
+        
+        /* Connecting Lines */
+        .connector-line {
+            height: 2px;
+            background-color: #475569;
+            flex-grow: 1;
+            position: relative;
+        }
+        .connector-line::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 8px solid #475569;
+        }
+
+        /* Convergence Label */
+        .convergence-label {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #0f172a;
+            padding: 0 16px;
+            color: #94a3b8;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16">
+<!-- Header -->
+<div class="mb-10 border-b border-slate-700 pb-6 flex justify-between items-end relative z-20">
+<div>
+<p class="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-2">Category Convergence</p>
+<h2 class="font-display text-5xl font-bold text-white tracking-tight">Where Platforms Fit</h2>
+</div>
+<div class="text-slate-400 text-lg font-light">The Unified Approach</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 flex flex-col justify-center relative z-10 px-8">
+<!-- Context Text -->
+<div class="mb-12 text-center max-w-3xl mx-auto">
+<p class="text-xl text-slate-300 font-light leading-relaxed">
+                    Platforms like Databricks or Snowflake are no longer just "warehouses" or "lakes." They are converging into unified operating systems for data and AI.
+                </p>
+</div>
+<!-- The Unified Platform Diagram -->
+<div class="relative w-full h-80 flex items-center justify-center">
+<!-- Background Boundary representing the Unified Platform -->
+<div class="absolute inset-x-0 inset-y-4 platform-boundary -z-0">
+<div class="convergence-label"><i class="fa-solid fa-layer-group mr-2"></i>Unified Data Intelligence Platform</div>
+<!-- Bottom Bar: Governance Layer -->
+<div class="absolute bottom-0 inset-x-0 h-12 bg-slate-800/80 rounded-b-2xl border-t border-slate-700 flex items-center justify-center">
+<div class="flex items-center space-x-2 text-slate-400 text-xs font-mono uppercase tracking-widest">
+<i class="fa-solid fa-lock text-indigo-400"></i>
+<span>Unified Governance &amp; Security Layer</span>
+</div>
+</div>
+</div>
+<!-- Stages Container -->
+<div class="flex items-center justify-between w-full px-12 relative z-10">
+<!-- Stage 1: Ingest -->
+<div class="w-64 stage-card rounded-xl p-6 flex flex-col items-center text-center h-48 justify-center">
+<div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mb-4 text-slate-300">
+<i class="fa-solid fa-cloud-arrow-down text-xl"></i>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 font-display">Ingest</h3>
+<p class="text-xs text-slate-400 leading-snug">
+                            Structured data, unstructured files, and real-time streams entering one place.
+                        </p>
+</div>
+<!-- Connector -->
+<div class="connector-line mx-4 opacity-50"></div>
+<!-- Stage 2: Lakehouse (HERO) -->
+<div class="w-80 -mt-8 stage-card hero rounded-xl p-8 flex flex-col items-center text-center h-48 justify-center">
+<div class="absolute -top-3 bg-indigo-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">The Engine</div>
+<div class="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center mb-5 text-white shadow-lg shadow-indigo-500/30">
+<i class="fa-solid fa-server text-3xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2 font-display">Lakehouse</h3>
+<p class="text-sm text-indigo-200 leading-snug">
+                            One copy of data. <br/>
+                            SQL warehouses for BI. <br/>
+                            Python compute for AI.
+                        </p>
+</div>
+<!-- Connector -->
+<div class="connector-line mx-4 opacity-50"></div>
+<!-- Stage 3: AI & Value -->
+<div class="w-64 stage-card rounded-xl p-6 flex flex-col items-center text-center h-48 justify-center">
+<div class="w-12 h-12 bg-purple-900/50 border border-purple-500/30 rounded-full flex items-center justify-center mb-4 text-purple-300">
+<i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 font-display">AI &amp; Apps</h3>
+<p class="text-xs text-slate-400 leading-snug">
+                            Generative AI agents, predictive models, and customer-facing apps.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Bottom Key Takeaway -->
+<div class="mt-8 flex justify-center space-x-12 text-sm text-slate-500">
+<div class="flex items-center space-x-3">
+<i class="fa-solid fa-xmark text-red-400"></i>
+<span>No data movement</span>
+</div>
+<div class="flex items-center space-x-3">
+<i class="fa-solid fa-check text-green-400"></i>
+<span>Shared context</span>
+</div>
+<div class="flex items-center space-x-3">
+<i class="fa-solid fa-check text-green-400"></i>
+<span>Consistent security</span>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6 flex justify-between items-center text-slate-600 text-xs uppercase tracking-widest border-t border-slate-800/50 relative z-20">
+<p>Platform Landscape</p>
+<p>12</p>
+</div>
+<!-- Background Decor -->
+<div class="absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-indigo-900/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+</div>
+</body>
+</html>

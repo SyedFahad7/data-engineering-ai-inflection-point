@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Modern Data Stack Before AI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        /* Adjust slide-container to take up full screen */
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        /* Grid pattern using SVG to avoid gradients */
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        /* Dashed borders for silos */
+        .silo-box {
+            border: 2px dashed #475569;
+            background-color: rgba(30, 41, 59, 0.5);
+            position: relative;
+        }
+        /* Custom wall divider */
+        .silo-wall {
+            border-right: 2px dashed rgba(239, 68, 68, 0.3);
+            height: 100%;
+            position: relative;
+        }
+        .silo-wall::after {
+            content: '\f023'; /* Lock icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(50%, -50%);
+            background-color: #0f172a;
+            color: rgba(239, 68, 68, 0.5);
+            padding: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16">
+<!-- Header -->
+<div class="mb-10 border-b border-slate-700 pb-6 flex justify-between items-end relative z-20">
+<div>
+<p class="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-2">Historical Context</p>
+<h2 class="font-display text-5xl font-bold text-white tracking-tight">The Modern Data Stack <span class="text-slate-500">Before AI</span></h2>
+</div>
+<div class="text-slate-400 text-lg font-light">The Era of Silos</div>
+</div>
+<div class="flex-1 flex gap-16 relative z-10">
+<!-- Left Column: Characteristics List -->
+<div class="w-5/12 flex flex-col justify-center space-y-10">
+<!-- Item 1 -->
+<div class="group">
+<div class="flex items-center space-x-4 mb-2">
+<div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center border border-slate-700 text-slate-400 group-hover:border-slate-500 transition-colors">
+<i class="fa-regular fa-clock text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white font-display">Batch &amp; Nightly</h3>
+</div>
+<p class="text-slate-400 text-base leading-relaxed pl-16">
+                        Data moved in slow, scheduled intervals. "Real-time" usually meant "yesterday's data." Pipelines were fragile and time-bound.
+                    </p>
+</div>
+<!-- Item 2 -->
+<div class="group">
+<div class="flex items-center space-x-4 mb-2">
+<div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center border border-slate-700 text-slate-400 group-hover:border-slate-500 transition-colors">
+<i class="fa-solid fa-chart-pie text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white font-display">Historical BI</h3>
+</div>
+<p class="text-slate-400 text-base leading-relaxed pl-16">
+                        The primary output was looking backward via dashboards. Humans were the bottleneck for interpreting charts.
+                    </p>
+</div>
+<!-- Item 3 -->
+<div class="group">
+<div class="flex items-center space-x-4 mb-2">
+<div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center border border-slate-700 text-slate-400 group-hover:border-slate-500 transition-colors">
+<i class="fa-solid fa-people-arrows text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold text-white font-display">Siloed Teams</h3>
+</div>
+<p class="text-slate-400 text-base leading-relaxed pl-16">
+                        Data Engineers moved data. Data Scientists modeled it. Product teams ignored it until something broke.
+                    </p>
+</div>
+</div>
+<!-- Right Column: Visual Diagram -->
+<div class="w-7/12 bg-slate-800/30 rounded-3xl border border-slate-700/50 p-8 flex flex-col justify-center relative">
+<!-- Background decoration for the diagram box -->
+<div class="absolute inset-0 bg-slate-900/50 rounded-3xl z-0"></div>
+<div class="relative z-10 flex flex-col h-full justify-center">
+<h3 class="text-slate-500 font-mono text-xs uppercase tracking-widest mb-6 text-center">Linear Value Chain</h3>
+<div class="flex items-stretch justify-between h-48 gap-4">
+<!-- Silo 1: Data Engineering -->
+<div class="flex-1 silo-box rounded-xl p-4 flex flex-col items-center justify-center gap-3">
+<div class="bg-slate-800 px-3 py-1 text-[10px] font-mono text-slate-400 border border-slate-700 rounded-full uppercase tracking-wider">Data Team</div>
+<div class="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border-2 border-slate-600 shadow-lg">
+<i class="fa-solid fa-database text-2xl text-slate-400"></i>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-slate-300">Warehouse</p>
+<p class="text-[10px] text-slate-500 mt-1">Single Source</p>
+</div>
+</div>
+<!-- Connector 1 -->
+<div class="flex flex-col justify-center items-center w-8 relative">
+<div class="h-0.5 w-full bg-slate-700"></div>
+<i class="fa-solid fa-chevron-right absolute right-0 text-slate-700 text-xs"></i>
+</div>
+<!-- Silo 2: Analytics -->
+<div class="flex-1 silo-box rounded-xl p-4 flex flex-col items-center justify-center gap-3">
+<div class="bg-slate-800 px-3 py-1 text-[10px] font-mono text-slate-400 border border-slate-700 rounded-full uppercase tracking-wider">BI Team</div>
+<div class="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border-2 border-slate-600 shadow-lg">
+<i class="fa-solid fa-table-columns text-2xl text-slate-400"></i>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-slate-300">Reporting</p>
+<p class="text-[10px] text-slate-500 mt-1">Dashboards</p>
+</div>
+</div>
+<!-- The Wall -->
+<div class="w-4 flex justify-center items-center">
+<div class="silo-wall"></div>
+</div>
+<!-- Silo 3: Product/ML (Disconnected) -->
+<div class="flex-1 silo-box rounded-xl p-4 flex flex-col items-center justify-center gap-3 opacity-60">
+<div class="bg-slate-800 px-3 py-1 text-[10px] font-mono text-slate-500 border border-slate-700 rounded-full uppercase tracking-wider">Product / ML</div>
+<div class="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border-2 border-dashed border-slate-600">
+<i class="fa-solid fa-robot text-2xl text-slate-500"></i>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-slate-400">Application</p>
+<p class="text-[10px] text-slate-500 mt-1">Disconnected</p>
+</div>
+<!-- CSV icon showing manual export -->
+<div class="absolute bottom-2 right-2 text-slate-600">
+<i class="fa-solid fa-file-csv text-lg"></i>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-center space-x-8 text-xs text-slate-500">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle text-[6px] text-red-900"></i>
+<span>High Latency</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle text-[6px] text-red-900"></i>
+<span>Fragmented Logic</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle text-[6px] text-red-900"></i>
+<span>Manual Hand-offs</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6 flex justify-between items-center text-slate-600 text-xs uppercase tracking-widest border-t border-slate-800/50 relative z-20">
+<p>The Old Way</p>
+<p>07</p>
+</div>
+<!-- Background Decor -->
+<div class="absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skills That Matter After the AI Inflection Point</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        /* Card Styles */
+        .skill-card {
+            background-color: rgba(30, 41, 59, 0.4); /* Slate 800 with opacity */
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-4px);
+            background-color: rgba(30, 41, 59, 0.8);
+            border-color: #6366f1; /* Indigo 500 */
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Icon Container */
+        .icon-box {
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover .icon-box {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16">
+<!-- Header -->
+<div class="mb-10 border-b border-slate-700 pb-6 flex justify-between items-end relative z-20">
+<div>
+<p class="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-2">Talent Transformation</p>
+<h2 class="font-display text-5xl font-bold text-white tracking-tight">Skills That Matter <span class="text-slate-500">Post-Inflection</span></h2>
+</div>
+<div class="text-slate-400 text-lg font-light">Beyond writing SQL</div>
+</div>
+<!-- Main Content: 2x2 Grid -->
+<div class="flex-1 grid grid-cols-2 gap-8 relative z-10 px-4">
+<!-- Skill 1: System Design -->
+<div class="skill-card rounded-2xl p-8 flex flex-row items-start gap-6 group">
+<div class="icon-box w-16 h-16 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+<i class="fa-solid fa-network-wired text-3xl text-blue-400"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-white font-display mb-2 group-hover:text-blue-300 transition-colors">System Design Thinking</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-3">
+                    Move beyond "making the pipeline run." Architect for failure modes, idempotency, and cost at scale.
+                </p>
+<ul class="space-y-1">
+<li class="flex items-center text-xs text-slate-500">
+<i class="fa-solid fa-check text-blue-500 mr-2"></i> Architecture over syntax
+                    </li>
+<li class="flex items-center text-xs text-slate-500">
+<i class="fa-solid fa-check text-blue-500 mr-2"></i> Cost-aware engineering
+                    </li>
+</ul>
+</div>
+</div>
+<!-- Skill 2: Downstream AI Awareness -->
+<div class="skill-card rounded-2xl p-8 flex flex-row items-start gap-6 group">
+<div class="icon-box w-16 h-16 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center shrink-0">
+<i class="fa-solid fa-brain text-3xl text-purple-400"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-white font-display mb-2 group-hover:text-purple-300 transition-colors">Downstream AI Awareness</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-3">
+                    Understand how models consume data. Embeddings, context windows, and RAG retrieval patterns.
+                </p>
+<ul class="space-y-1">
+<li class="flex items-center text-xs text-slate-500">
+<i class="fa-solid fa-check text-purple-500 mr-2"></i> Vector search basics
+                    </li>
+<li class="flex items-center text-xs text-slate-500">
+<i class="fa-solid fa-check text-purple-500 mr-2"></i> Unstructured data pipelines
+                    </li>
+</ul>
+</div>
+</div>
+<!-- Skill 3: Quality & Observability -->
+<div class="skill-card rounded-2xl p-8 flex flex-row items-start gap-6 group">
+<div class="icon-box w-16 h-16 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center shrink-0">
+<i class="fa-solid fa-heart-pulse text-3xl text-teal-400"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-white font-display mb-2 group-hover:text-teal-300 transition-colors">Quality &amp; Observability</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-3">
+                    Silent failures kill AI products. Implement circuit breakers, freshness checks, and anomaly detection.
+                </p>
+<ul class="space-y-1">
+<li class="flex items-center text-xs text-slate-500">
+<i class="fa-solid fa-check text-teal-500 mr-2"></i> Automated data contracts
+                    </li>
+<li class="flex items-center text-xs text-slate-500">
+<i class="fa-solid fa-check text-teal-500 mr-2"></i> Mean time to detection (MTTD)
+                    </li>
+</ul>
+</div>
+</div>
+<!-- Skill 4: Communication -->
+<div class="skill-card rounded-2xl p-8 flex flex-row items-start gap-6 group">
+<div class="icon-box w-16 h-16 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center shrink-0">
+<i class="fa-solid fa-people-arrows text-3xl text-orange-400"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-white font-display mb-2 group-hover:text-orange-300 transition-colors">Cross-Team Bridge</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-3">
+                    Translate between product requirements and data reality. Be the adult in the room for feasibility.
+                </p>
+<ul class="space-y-1">
+<li class="flex items-center text-xs text-slate-500">
+<i class="fa-solid fa-check text-orange-500 mr-2"></i> SLA negotiation
+                    </li>
+<li class="flex items-center text-xs text-slate-500">
+<i class="fa-solid fa-check text-orange-500 mr-2"></i> Product-mindedness
+                    </li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6 flex justify-between items-center text-slate-600 text-xs uppercase tracking-widest border-t border-slate-800/50 relative z-20">
+<p>Skills Evolution</p>
+<p>13</p>
+</div>
+<!-- Background Decor -->
+<div class="absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0"></div>
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-900/5 rounded-full blur-3xl pointer-events-none z-0"></div>
+</div>
+</body>
+</html>

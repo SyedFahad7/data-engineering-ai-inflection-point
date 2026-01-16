@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Data Engineering After the AI Inflection Point</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            /* Slate 900 */
+        }
+
+        /* Adjust slide-container to take up full screen */
+        .slide-container {
+            width: 100vw;
+            /* Full viewport width */
+            height: 100vh;
+            /* Full viewport height */
+            position: relative;
+            overflow: hidden;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Abstract decorative grid */
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(51, 65, 85, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(51, 65, 85, 0.3) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        /* Custom accent glow (simulated without gradient syntax if possible, but box-shadow is safe) */
+        .accent-glow {
+            box-shadow: 0 0 100px 40px rgba(99, 102, 241, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+        <!-- Geometric Accent Top Right -->
+        <div class="absolute -top-20 -right-20 w-[600px] h-[600px] border border-slate-700 rounded-full opacity-20">
+        </div>
+        <div class="absolute -top-10 -right-10 w-[500px] h-[500px] border border-slate-600 rounded-full opacity-20">
+        </div>
+        <div class="absolute top-40 right-40 w-4 h-4 bg-indigo-500 rounded-full accent-glow"></div>
+        <div class="absolute top-20 right-[400px] w-2 h-2 bg-slate-500 rounded-full"></div>
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col justify-center px-24 z-10 relative">
+            <!-- Tagline -->
+            <div class="flex items-center space-x-3 mb-8">
+                <div class="h-[1px] w-12 bg-indigo-500"></div>
+                <p class="text-indigo-400 font-mono text-sm tracking-widest uppercase">Keynote 2026</p>
+            </div>
+            <!-- Title -->
+            <h1 class="font-display text-7xl font-bold leading-[1.1] tracking-tight text-white mb-8">
+                Data Engineering <br />
+                <span class="text-slate-400">After the</span> <span class="text-indigo-400">AI Inflection Point</span>
+            </h1>
+            <!-- Subtitle -->
+            <p class="text-2xl text-slate-300 font-light max-w-3xl leading-relaxed">
+                How AI is reshaping data systems, teams, and value in 2026!
+            </p>
+        </div>
+        <!-- Footer / Meta Data -->
+        <div
+            class="h-32 px-24 flex items-center justify-between border-t border-slate-800 bg-slate-900/50 backdrop-blur-sm z-20">
+            <!-- Speaker Info -->
+            <div class="flex items-center space-x-4">
+                <div
+                    class="w-22 h-20 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700">
+                    <img src="./speaker.png" alt="Speaker Photo"
+                        class="w-full h-full object-cover rounded-full opacity-70" />    
+                </div>
+                <div>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Speaker</p>
+                    <p class="text-lg font-medium text-white">Syed Fahad</p>
+                    <div class="flex items-center gap-1">
+                    <p class="text-sm font-medium text-white">DevRel Engineer, BetterBugs</p>
+                    <img src="company2.png" alt="" class="w-4 h-4 mt-[1px]" />
+                    </div>
+                </div>
+            </div>
+            <!-- Event Branding Placeholder -->
+            <div class="flex items-center space-x-4">
+                <div class="text-right">
+                    <img src="IDC.png" alt="IDC Logo" class="w-32 h-auto" />
+                </div>
+                <div>
+                    <img src="idchyd2.png" alt="Data Engineering Conference Logo" class="w-44 h-auto" />
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

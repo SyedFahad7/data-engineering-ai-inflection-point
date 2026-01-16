@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>What the Tailwind Situation Represents</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        /* Adjust slide-container to take up full screen */
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .arrow-connector::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -24px;
+            width: 16px;
+            height: 2px;
+            background-color: #475569;
+            transform: translateY(-50%);
+        }
+        .arrow-connector::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -28px;
+            width: 0; 
+            height: 0; 
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 6px solid #475569;
+            transform: translateY(-50%);
+        }
+        /* Custom glow for the active stage */
+        .active-stage-glow {
+            box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16">
+<!-- Header -->
+<div class="mb-12 border-b border-slate-700 pb-6 flex justify-between items-end relative z-20">
+<div>
+<p class="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-2">The Value Shift Analogy</p>
+<h2 class="font-display text-5xl font-bold text-white tracking-tight">What the "Tailwind Situation" Represents</h2>
+</div>
+<div class="text-slate-400 text-lg font-light">From Knowledge to Systems</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col justify-center relative z-10">
+<!-- Analogy Concept Intro -->
+<div class="mb-8 max-w-4xl">
+<p class="text-xl text-slate-300 font-light leading-relaxed">
+                    Historically, companies like Tailwind CSS thrived by selling access to knowledge (templates, docs). AI has compressed the value of static knowledge, forcing a shift toward functional systems.
+                </p>
+</div>
+<!-- Progression Cards -->
+<div class="grid grid-cols-3 gap-12 items-stretch h-80">
+<!-- Stage 1: Docs -->
+<div class="relative group arrow-connector">
+<div class="h-full bg-slate-800/40 border border-slate-700 rounded-2xl p-8 flex flex-col transition-all duration-300 hover:bg-slate-800/60">
+<div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 text-slate-300">
+<i class="fa-regular fa-file-code text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-2 font-display">1. Static Documentation</h3>
+<p class="text-slate-400 text-sm mb-4 flex-1">
+                            Value captures attention through search. Developers read docs to learn "how to" build.
+                        </p>
+<div class="mt-auto pt-4 border-t border-slate-700/50">
+<div class="flex justify-between text-xs font-mono uppercase text-slate-500">
+<span>Model</span>
+<span>Traffic &amp; Ads</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage 2: Assistants -->
+<div class="relative group arrow-connector">
+<div class="h-full bg-slate-800/40 border border-slate-600 rounded-2xl p-8 flex flex-col transition-all duration-300 hover:bg-slate-800/60">
+<div class="w-12 h-12 bg-indigo-900/30 border border-indigo-500/20 rounded-lg flex items-center justify-center mb-6 text-indigo-300">
+<i class="fa-solid fa-robot text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-2 font-display">2. AI Compression</h3>
+<p class="text-slate-400 text-sm mb-4 flex-1">
+                            LLMs ingest docs. Developers ask agents "write this for me." Traffic to docs drops; utility increases.
+                        </p>
+<div class="mt-auto pt-4 border-t border-slate-700/50">
+<div class="flex justify-between text-xs font-mono uppercase text-indigo-400">
+<span>Risk</span>
+<span>Commoditization</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage 3: Systems -->
+<div class="relative group active-stage-glow">
+<div class="absolute inset-0 bg-indigo-600/10 rounded-2xl -m-1 blur-sm"></div>
+<div class="h-full bg-slate-800 border-2 border-indigo-500 rounded-2xl p-8 flex flex-col relative z-10 shadow-xl">
+<div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6 text-white shadow-lg shadow-indigo-500/30">
+<i class="fa-solid fa-cubes-stacked text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-2 font-display">3. Integrated Systems</h3>
+<p class="text-slate-200 text-sm mb-4 flex-1">
+                            Differentiation moves to proprietary data, verified components, and deep system integration that AI relies on.
+                        </p>
+<div class="mt-auto pt-4 border-t border-slate-700/50">
+<div class="flex justify-between text-xs font-mono uppercase text-indigo-300 font-bold">
+<span>Future</span>
+<span>Data &amp; Systems</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6 flex justify-between items-center text-slate-600 text-xs uppercase tracking-widest border-t border-slate-800/50 relative z-20">
+<p>Industry Analogy</p>
+<p>05</p>
+</div>
+<!-- Background Decor -->
+<div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-slate-800/20 rounded-tl-full pointer-events-none z-0"></div>
+<div class="absolute top-20 right-20 w-32 h-32 border border-slate-700/30 rounded-full pointer-events-none z-0"></div>
+<div class="absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0"></div>
+</div>
+</body>
+</html>

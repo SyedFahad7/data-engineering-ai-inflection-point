@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Closing Thought</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Lora:ital,wght@1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        /* Adjust slide-container to take up full screen */
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .font-serif-accent {
+            font-family: 'Lora', serif;
+        }
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        /* Typography Highlights */
+        .highlight-word {
+            position: relative;
+            z-index: 10;
+        }
+        .highlight-word::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: -4px;
+            right: -4px;
+            height: 12px;
+            background-color: rgba(99, 102, 241, 0.3); /* Indigo 500 low opacity */
+            z-index: -1;
+            transform: rotate(-1deg);
+        }
+
+        .quote-mark {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 200px;
+            line-height: 1;
+            position: absolute;
+            color: #334155;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        
+        /* Blur Blob for Atmosphere (Solid color, no gradient) */
+        .ambient-glow {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background-color: #1e1b4b; /* Indigo 950 */
+            border-radius: 9999px;
+            filter: blur(120px);
+            opacity: 0.6;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16 flex flex-col justify-center items-center relative overflow-hidden">
+<!-- Background Elements -->
+<div class="absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0"></div>
+<div class="ambient-glow top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+<!-- Giant Quote Marks -->
+<div class="quote-mark top-16 left-16">“</div>
+<div class="quote-mark bottom-16 right-16 leading-[0]">”</div>
+<!-- Content Wrapper -->
+<div class="relative z-10 max-w-5xl w-full flex flex-col items-center text-center gap-12">
+<!-- Top Label -->
+<div class="mb-4">
+<p class="text-indigo-400 font-mono text-sm tracking-[0.2em] uppercase border border-indigo-500/30 px-4 py-2 rounded-full bg-indigo-500/5">
+                    Closing Thought
+                </p>
+</div>
+<!-- Main Quote Block -->
+<div class="space-y-8">
+<!-- Part 1: The Problem -->
+<div class="flex flex-col items-center">
+<p class="text-5xl md:text-6xl text-slate-300 font-light tracking-tight mb-2">
+                        AI is transformative,
+                    </p>
+<p class="text-5xl md:text-6xl text-slate-300 font-light tracking-tight">
+                        but <span class="font-serif-accent italic text-amber-500 font-medium">data engineering</span> makes it scalable.
+                    </p>
+</div>
+<!-- Divider -->
+<div class="w-24 h-1 bg-slate-700 rounded-full mx-auto my-4"></div>
+<!-- Part 2: The Solution -->
+<div class="flex flex-col items-center">
+<p class="text-3xl text-slate-400 mb-6 font-light">
+                        The future belongs to teams that integrate
+                    </p>
+<p class="text-6xl md:text-7xl font-display font-bold text-white leading-tight">
+                        AI and Data <br/>
+<span class="text-indigo-400 relative inline-block mt-2">
+                            Foundations
+                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-indigo-500 opacity-50" preserveaspectratio="none" viewbox="0 0 100 10">
+<path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</span>
+</p>
+</div>
+</div>
+<!-- Speaker / Context -->
+<div class="mt-12 flex items-center gap-4 text-slate-500 opacity-80">
+<div class="h-px w-12 bg-slate-700"></div>
+<p class="text-sm font-mono uppercase tracking-widest">
+                    The AI Inflection Point is a Data Engineering Opportunity 
+                </p>
+<div class="h-px w-12 bg-slate-700"></div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-8 left-16 right-16 flex justify-between items-center z-20">
+<div class="flex items-center gap-2 text-slate-600">
+<i class="fa-solid fa-layer-group"></i>
+<span class="text-lg font-mono uppercase tracking-wider">Systems over Tools</span>
+</div>
+<p class="text-slate-700 font-mono text-xs">17</p>
+</div>
+</div>
+</body>
+</html>

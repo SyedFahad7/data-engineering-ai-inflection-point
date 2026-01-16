@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Key Takeaways</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        /* Card Styles */
+        .takeaway-card {
+            background-color: rgba(30, 41, 59, 0.4); /* Slate 800 with opacity */
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .takeaway-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: currentColor; /* Uses the text-color class set on parent */
+            opacity: 0.8;
+        }
+
+        .takeaway-card:hover {
+            transform: translateY(-8px);
+            background-color: rgba(30, 41, 59, 0.9);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-number {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 80px;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            opacity: 0.05;
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .icon-circle {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .takeaway-card:hover .icon-circle {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16">
+<!-- Header -->
+<div class="mb-12 border-b border-slate-700 pb-6 flex justify-between items-end relative z-20">
+<div>
+<p class="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-2">Summary</p>
+<h2 class="font-display text-5xl font-bold text-white tracking-tight">Key <span class="text-slate-500">Takeaways</span></h2>
+</div>
+<div class="text-slate-400 text-lg font-light">The New Reality</div>
+</div>
+<!-- Main Content: 3 Horizontal Cards -->
+<div class="flex-1 grid grid-cols-3 gap-8 relative z-10 px-4 items-stretch h-full pb-8">
+<!-- Card 1: Responsibility -->
+<div class="takeaway-card rounded-2xl p-8 flex flex-col text-amber-500 group">
+<div class="card-number">01</div>
+<div class="relative z-10 flex-1 flex flex-col">
+<div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-8 icon-circle shadow-lg shadow-amber-900/20">
+<i class="fa-solid fa-scale-unbalanced text-3xl text-amber-400"></i>
+</div>
+<h3 class="text-2xl font-bold text-white font-display mb-4 group-hover:text-amber-300 transition-colors">Responsibility Has Scaled</h3>
+<p class="text-slate-400 text-base leading-relaxed">
+                        AI didn't reduce the need for engineering; it raised the stakes. When data feeds autonomous agents, quality issues aren't just dashboard glitches—they are product failures.
+                    </p>
+</div>
+<div class="mt-6 pt-6 border-t border-slate-700/50">
+<p class="text-xs font-mono text-amber-500/80 uppercase tracking-wider flex items-center">
+<i class="fa-solid fa-arrow-up mr-2"></i> Higher Stakes
+                    </p>
+</div>
+</div>
+<!-- Card 2: Systems vs Stacks -->
+<div class="takeaway-card rounded-2xl p-8 flex flex-col text-indigo-500 group">
+<div class="card-number">02</div>
+<div class="relative z-10 flex-1 flex flex-col">
+<div class="w-16 h-16 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-8 icon-circle shadow-lg shadow-indigo-900/20">
+<i class="fa-solid fa-network-wired text-3xl text-indigo-400"></i>
+</div>
+<h3 class="text-2xl font-bold text-white font-display mb-4 group-hover:text-indigo-300 transition-colors">Systems &gt; Stacks</h3>
+<p class="text-slate-400 text-base leading-relaxed">
+                        The era of collecting tools for a "Modern Data Stack" is fading. The focus is now on designing resilient, end-to-end data systems that guarantee reliability for AI consumers.
+                    </p>
+</div>
+<div class="mt-6 pt-6 border-t border-slate-700/50">
+<p class="text-xs font-mono text-indigo-500/80 uppercase tracking-wider flex items-center">
+<i class="fa-solid fa-cubes-stacked mr-2"></i> Integration Focus
+                    </p>
+</div>
+</div>
+<!-- Card 3: Defining Outcomes -->
+<div class="takeaway-card rounded-2xl p-8 flex flex-col text-emerald-500 group">
+<div class="card-number">03</div>
+<div class="relative z-10 flex-1 flex flex-col">
+<div class="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-8 icon-circle shadow-lg shadow-emerald-900/20">
+<i class="fa-solid fa-bullseye text-3xl text-emerald-400"></i>
+</div>
+<h3 class="text-2xl font-bold text-white font-display mb-4 group-hover:text-emerald-300 transition-colors">Engineers Define Success</h3>
+<p class="text-slate-400 text-base leading-relaxed">
+                        Models are becoming commodities. The true competitive advantage lies in proprietary data quality. Data engineers now directly define the performance ceiling of AI products.
+                    </p>
+</div>
+<div class="mt-6 pt-6 border-t border-slate-700/50">
+<p class="text-xs font-mono text-emerald-500/80 uppercase tracking-wider flex items-center">
+<i class="fa-solid fa-crown mr-2"></i> Strategic Value
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6 flex justify-between items-center text-slate-600 text-xs uppercase tracking-widest border-t border-slate-800/50 relative z-20">
+<p>Closing Thoughts</p>
+<p>16</p>
+</div>
+<!-- Background Decor -->
+<div class="absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-indigo-900/5 rounded-full blur-3xl pointer-events-none z-0"></div>
+</div>
+</body>
+</html>

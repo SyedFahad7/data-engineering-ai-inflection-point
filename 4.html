@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Industry Signals We Cannot Ignore</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        /* Adjust slide-container to take up full screen */
+        .slide-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .grid-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1z' fill='%23334155' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        /* Custom timeline line style */
+        .timeline-line {
+            height: 2px;
+            background-color: #334155;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            z-index: 0;
+        }
+        .timeline-progress {
+            height: 2px;
+            background-color: #6366f1; /* Indigo 500 */
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%; /* Full because we are in 2026 */
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container p-16">
+<!-- Header -->
+<div class="mb-10 border-b border-slate-700 pb-6 flex justify-between items-end relative z-20">
+<div>
+<p class="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-2">Market Analysis</p>
+<h2 class="font-display text-5xl font-bold text-white tracking-tight">Industry Signals We Cannot Ignore</h2>
+</div>
+<div class="text-slate-400 text-lg font-light">The Shift to Systems</div>
+</div>
+<!-- Main Content: Timeline -->
+<div class="flex-1 flex flex-col justify-center relative">
+<!-- Timeline Track -->
+<div class="relative w-full mb-12 px-16">
+<div class="timeline-line"></div>
+<div class="timeline-progress" style="width: 100%; background: #6366f1;"></div>
+<!-- Dots on Timeline -->
+<div class="absolute top-[34px] left-[16.66%] w-3 h-3 bg-slate-900 border-2 border-indigo-500 rounded-full z-10"></div>
+<div class="absolute top-[34px] left-[50%] w-3 h-3 bg-slate-900 border-2 border-indigo-500 rounded-full z-10"></div>
+<div class="absolute top-[34px] left-[83.33%] w-4 h-4 bg-indigo-500 border-2 border-indigo-200 rounded-full z-10 shadow-[0_0_15px_rgba(99,102,241,0.6)]"></div>
+</div>
+<!-- Cards Container -->
+<div class="grid grid-cols-3 gap-8 px-4">
+<!-- Card 2024 -->
+<div class="relative group">
+<div class="bg-slate-800/40 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800/60 transition-colors h-full flex flex-col">
+<div class="mb-6 flex items-center justify-between">
+<span class="text-slate-500 font-mono text-sm border border-slate-700 px-2 py-1 rounded">2024</span>
+<i class="fa-solid fa-users-gear text-slate-400 text-xl"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-3 font-display">Restructuring as Focus</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-4 flex-1">
+                            Layoffs and re-orgs were often misinterpreted as failure. In reality, they were a capital rotation: moving budget from legacy maintenance to AI readiness and data infrastructure.
+                        </p>
+<div class="pt-4 border-t border-slate-700/50">
+<p class="text-xs text-indigo-400 uppercase tracking-wider font-semibold">Signal: Efficiency</p>
+</div>
+</div>
+</div>
+<!-- Card 2025 -->
+<div class="relative group">
+<div class="bg-slate-800/40 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800/60 transition-colors h-full flex flex-col">
+<div class="mb-6 flex items-center justify-between">
+<span class="text-slate-500 font-mono text-sm border border-slate-700 px-2 py-1 rounded">2025</span>
+<i class="fa-solid fa-compass text-slate-400 text-xl"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-3 font-display">Tool Vendor Pivots</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-4 flex-1">
+                            Developer tool companies (e.g., Vercel, Netlify) shifted marketing from "building blocks" to "AI-native platforms." The market stopped buying components and started buying intelligent outcomes.
+                        </p>
+<div class="pt-4 border-t border-slate-700/50">
+<p class="text-xs text-indigo-400 uppercase tracking-wider font-semibold">Signal: Consolidation</p>
+</div>
+</div>
+</div>
+<!-- Card 2026 (Current) -->
+<div class="relative group">
+<div class="absolute inset-0 bg-indigo-500/5 rounded-2xl blur-xl"></div>
+<div class="bg-slate-800 border border-indigo-500/30 rounded-2xl p-8 relative h-full flex flex-col shadow-2xl shadow-indigo-900/10">
+<div class="mb-6 flex items-center justify-between">
+<span class="bg-indigo-500/20 text-indigo-300 font-mono text-sm border border-indigo-500/30 px-2 py-1 rounded font-bold">2026</span>
+<i class="fa-solid fa-wand-magic-sparkles text-indigo-400 text-xl"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-3 font-display">Automation &amp; Leverage</h3>
+<p class="text-slate-300 text-sm leading-relaxed mb-4 flex-1">
+                            Differentiation is no longer in writing code, but in designing systems that verify code. Value creation has moved upstream to architecture and downstream to data quality.
+                        </p>
+<div class="pt-4 border-t border-slate-700/50">
+<p class="text-xs text-indigo-400 uppercase tracking-wider font-semibold">Signal: Leverage</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6 flex justify-between items-center text-slate-600 text-xs uppercase tracking-widest border-t border-slate-800/50 relative z-20">
+<p>Market Trends</p>
+<p>04</p>
+</div>
+<!-- Background Elements -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-slate-800/10 -skew-x-12 pointer-events-none z-0"></div>
+<div class="absolute bottom-0 left-0 w-full h-32 grid-pattern opacity-20 pointer-events-none z-0"></div>
+</div>
+</body>
+</html>
